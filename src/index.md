@@ -1,0 +1,16 @@
+---
+layout: index.njk
+title: Welcome to Space Club!
+description: Check out this home page
+permalink: "/"
+---
+
+# Hello World!
+
+Located on Dione, one of the largest moon's of Saturn, our club hosts regular get togethers.   
+Join us as we share our passion for our space home, whether gathering for meetings, contributing to the wiki and docs, reaching out to other moons, the possibilites are endless!
+
+
+<div>
+{% include "partials/homeCards.njk" %}
+</div>
