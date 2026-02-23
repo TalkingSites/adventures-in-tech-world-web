@@ -141,19 +141,19 @@ module.exports = function (eleventyConfig) {
 
   // All events (sorted by date ascending)
   eleventyConfig.addCollection("events", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/pages/events/*.md")
+    return collectionApi.getFilteredByGlob("src/events/*.md")
       .sort((a, b) => new Date(a.data.eventDate) - new Date(b.data.eventDate));
   });
 
   eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/pages/posts/*.md")
+    return collectionApi.getFilteredByGlob("src/posts/*.md")
       .sort((a, b) => new Date(b.data.postDate) - new Date(a.data.postDate));
   });
 
   // Upcoming events (event hasn't ended yet)
   eleventyConfig.addCollection("upcomingEvents", function (collectionApi) {
     const now = dayjs().tz(SITE_TIMEZONE);
-    return collectionApi.getFilteredByGlob("src/pages/events/*.md")
+    return collectionApi.getFilteredByGlob("src/events/*.md")
       .filter(e => {
         const endDateTime = getEventEndDateTime(e);
         return endDateTime && endDateTime.isAfter(now);
@@ -164,7 +164,7 @@ module.exports = function (eleventyConfig) {
   // Past events (event has ended)
   eleventyConfig.addCollection("pastEvents", function (collectionApi) {
     const now = dayjs().tz(SITE_TIMEZONE);
-    return collectionApi.getFilteredByGlob("src/pages/events/*.md")
+    return collectionApi.getFilteredByGlob("src/events/*.md")
       .filter(e => {
         const endDateTime = getEventEndDateTime(e);
         return endDateTime && endDateTime.isSameOrBefore(now);
@@ -174,14 +174,14 @@ module.exports = function (eleventyConfig) {
 
   // Featured events
   eleventyConfig.addCollection("featuredEvents", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/pages/events/*.md")
+    return collectionApi.getFilteredByGlob("src/events/*.md")
       .filter(e => e.data.featured === true)
       .sort((a, b) => new Date(a.data.eventDate) - new Date(b.data.eventDate));
   });
 
   // Featured posts
   eleventyConfig.addCollection("featuredPosts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/pages/posts/*.md")
+    return collectionApi.getFilteredByGlob("src/posts/*.md")
       .filter(p => p.data.featured === true)
       .sort((a, b) => new Date(b.data.postDate) - new Date(a.data.postDate));
   });
@@ -189,7 +189,7 @@ module.exports = function (eleventyConfig) {
   // Preview events - upcoming only (excluding featured)
   eleventyConfig.addCollection("previewEvents", function (collectionApi) {
     const now = dayjs().tz(SITE_TIMEZONE);
-    return collectionApi.getFilteredByGlob("src/pages/events/*.md")
+    return collectionApi.getFilteredByGlob("src/events/*.md")
       .filter(e => {
         const endDateTime = getEventEndDateTime(e);
         return endDateTime && 
@@ -203,7 +203,7 @@ module.exports = function (eleventyConfig) {
   // Preview events - upcoming only (including featured)
   eleventyConfig.addCollection("previewEventsAll", function (collectionApi) {
     const now = dayjs().tz(SITE_TIMEZONE);
-    return collectionApi.getFilteredByGlob("src/pages/events/*.md")
+    return collectionApi.getFilteredByGlob("src/events/*.md")
       .filter(e => {
         const endDateTime = getEventEndDateTime(e);
         return endDateTime && endDateTime.isAfter(now);
@@ -215,7 +215,7 @@ module.exports = function (eleventyConfig) {
   // Preview events - combined past and upcoming (excluding featured)
   eleventyConfig.addCollection("previewEventsCombined", function (collectionApi) {
     const now = dayjs().tz(SITE_TIMEZONE);
-    const allEvents = collectionApi.getFilteredByGlob("src/pages/events/*.md")
+    const allEvents = collectionApi.getFilteredByGlob("src/events/*.md")
       .filter(e => e.data.eventDate && e.data.featured !== true);
     
     const upcoming = allEvents
@@ -240,7 +240,7 @@ module.exports = function (eleventyConfig) {
   // Preview events - combined past and upcoming (including featured)
   eleventyConfig.addCollection("previewEventsCombinedAll", function (collectionApi) {
     const now = dayjs().tz(SITE_TIMEZONE);
-    const allEvents = collectionApi.getFilteredByGlob("src/pages/events/*.md")
+    const allEvents = collectionApi.getFilteredByGlob("src/events/*.md")
       .filter(e => e.data.eventDate);
     
     const upcoming = allEvents
@@ -265,7 +265,7 @@ module.exports = function (eleventyConfig) {
   // Preview events - past only (excluding featured)
   eleventyConfig.addCollection("previewPastEvents", function (collectionApi) {
     const now = dayjs().tz(SITE_TIMEZONE);
-    return collectionApi.getFilteredByGlob("src/pages/events/*.md")
+    return collectionApi.getFilteredByGlob("src/events/*.md")
       .filter(e => {
         const endDateTime = getEventEndDateTime(e);
         return endDateTime && 
@@ -279,7 +279,7 @@ module.exports = function (eleventyConfig) {
   // Preview events - past only (including featured)
   eleventyConfig.addCollection("previewPastEventsAll", function (collectionApi) {
     const now = dayjs().tz(SITE_TIMEZONE);
-    return collectionApi.getFilteredByGlob("src/pages/events/*.md")
+    return collectionApi.getFilteredByGlob("src/events/*.md")
       .filter(e => {
         const endDateTime = getEventEndDateTime(e);
         return endDateTime && endDateTime.isSameOrBefore(now);
@@ -291,7 +291,7 @@ module.exports = function (eleventyConfig) {
   // Preview events - upcoming only (excluding featured) - duplicate for consistency
   eleventyConfig.addCollection("previewUpcomingEvents", function (collectionApi) {
     const now = dayjs().tz(SITE_TIMEZONE);
-    return collectionApi.getFilteredByGlob("src/pages/events/*.md")
+    return collectionApi.getFilteredByGlob("src/events/*.md")
       .filter(e => {
         const endDateTime = getEventEndDateTime(e);
         return endDateTime && 
@@ -305,7 +305,7 @@ module.exports = function (eleventyConfig) {
   // Preview events - upcoming only (including featured) - duplicate for consistency
   eleventyConfig.addCollection("previewUpcomingEventsAll", function (collectionApi) {
     const now = dayjs().tz(SITE_TIMEZONE);
-    return collectionApi.getFilteredByGlob("src/pages/events/*.md")
+    return collectionApi.getFilteredByGlob("src/events/*.md")
       .filter(e => {
         const endDateTime = getEventEndDateTime(e);
         return endDateTime && endDateTime.isAfter(now);
@@ -316,7 +316,7 @@ module.exports = function (eleventyConfig) {
 
   // Preview posts (excluding featured by default)
   eleventyConfig.addCollection("previewPosts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/pages/posts/*.md")
+    return collectionApi.getFilteredByGlob("src/posts/*.md")
       .filter(p => p.data.featured !== true) // hide featured
       .sort((a, b) => new Date(b.data.postDate) - new Date(a.data.postDate))
       .slice(0, 3);
@@ -324,7 +324,7 @@ module.exports = function (eleventyConfig) {
 
   // Preview posts (including featured)
   eleventyConfig.addCollection("previewPostsAll", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/pages/posts/*.md")
+    return collectionApi.getFilteredByGlob("src/posts/*.md")
       .sort((a, b) => new Date(b.data.postDate) - new Date(a.data.postDate))
       .slice(0, 3);
   });
@@ -345,7 +345,7 @@ module.exports = function (eleventyConfig) {
       } catch { return []; }
     }
 
-    const events = collectionApi.getFilteredByGlob("src/pages/events/*.md")
+    const events = collectionApi.getFilteredByGlob("src/events/*.md")
       .filter(e => e.data.gallery)
       .map(e => {
         const galleryPath = e.data.gallery.replace(/^\//, '');
@@ -359,7 +359,7 @@ module.exports = function (eleventyConfig) {
         };
       });
     
-    const posts = collectionApi.getFilteredByGlob("src/pages/posts/*.md")
+    const posts = collectionApi.getFilteredByGlob("src/posts/*.md")
       .filter(p => p.data.gallery)
       .map(p => {
         const galleryPath = p.data.gallery.replace(/^\//, '');
