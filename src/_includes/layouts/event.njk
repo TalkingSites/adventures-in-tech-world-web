@@ -10,6 +10,15 @@ layout: base.njk
     {% endif %}
 
     {{ content | safe }}
+
+    {%- if recapPost %}
+    <p class="mt-4">Read the <a href="{{recapPost}}">recap post</a>!</p>
+    {%- endif %}
+
+    {%- if gallery and not (content | hasGallery) %}
+    {% set path = gallery | stripLeadingSlash %}
+    {% include "partials/gallery.njk" %}
+    {%- endif %}
   </div>
   <div class="d-flex justify-content-center gap-3 my-4">
     {% include "partials/btn.njk" %}

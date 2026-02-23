@@ -1,5 +1,5 @@
 # SpaceClub! Website Template
-
+**Version:** 1.1.0
 A flexible Eleventy based static site template that’s easy to edit, easy to deploy, and easy to take anywhere.
 
 SpaceClub! is built with Eleventy, Markdown, Bootstrap, and Pagefind, making it simple to manage content while still offering powerful layouts, components, and features as your site grows.
