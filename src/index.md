@@ -11,12 +11,12 @@ permalink: "/"
 
 <div class="d-flex flex-wrap gap-3 my-4">
 {% set text = "Play in Your Browser" %}
-{% set href = "#play" %}
+{% set link = "#play" %}
 {% set icon = "play-fill" %}
 {% include "partials/btn.njk" %}
 
 {% set text = "Dev Blog" %}
-{% set href = "/posts/" %}
+{% set link = "/posts/" %}
 {% set icon = "newspaper" %}
 {% set style = "outline-secondary" %}
 {% include "partials/btn.njk" %}
@@ -44,13 +44,13 @@ Adventures in Tech World is **open source**. The game code is freely available t
 
 <div class="d-flex flex-wrap gap-3 my-4">
 {% set text = "View Game on GitHub" %}
-{% set href = site.gameRepo %}
+{% set link = site.gameRepo %}
 {% set icon = "github" %}
 {% set style = "outline-primary" %}
 {% set align = "start" %}
 {% include "partials/btn.njk" %}
 {% set text = "Get in Touch" %}
-{% set href = "/contact/" %}
+{% set link = "/contact/" %}
 {% set icon = "envelope" %}
 {% set style = "outline-secondary" %}
 {% set align = "start" %}

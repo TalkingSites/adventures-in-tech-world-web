@@ -3,7 +3,7 @@
 {% set style = style | default("primary") %}
 {% set icon = icon | default("arrow-left") %}
 {% set text = text | default("Back to Home") %}
-{% set href = href | default("/") %}
+{% set link = link | default("/") %}
 
 {# Determine button class based on style #}
 {% if style.startsWith("outline") %}
@@ -24,10 +24,5 @@
 {% endif %}
 
 <div class="d-flex {{ alignClass }}">
-<a href="{{ href }}" class="btn {{ btnClass }}">
-{% if icon %}
-<i class="bi bi-{{ icon }} me-2"></i>
-{% endif %}
-{{ text }}
-</a>
+<a href="{{ link }}" class="btn {{ btnClass }}">{% if icon %}<i class="bi bi-{{ icon }} me-2"></i> {% endif %}{{ text }}</a>
 </div>
