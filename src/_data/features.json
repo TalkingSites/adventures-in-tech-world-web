@@ -32,7 +32,7 @@
   {
     "icon": "globe",
     "color": "secondary",
-    "title": "Play Anywhere",
-    "description": "Runs in the browser with no download required. Also available on macOS, iOS, and Android."
+    "title": "Play in Your Browser",
+    "description": "Runs entirely in the browser with no download required. Just open the link and start playing."
   }
 ]

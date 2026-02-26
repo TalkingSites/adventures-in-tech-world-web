@@ -5,6 +5,11 @@
     "footer": true
   },
   {
+    "title": "About",
+    "href": "/about",
+    "footer": true
+  },
+  {
     "title": "Dev Blog",
     "href": "/posts",
     "footer": true
