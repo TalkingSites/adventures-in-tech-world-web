@@ -2,7 +2,6 @@
 layout: base.njk
 title: About Us
 description: Learn more about what Space Club! is and what we do.
-permalink: "/about/"
 ---
 
 # About Space Club!

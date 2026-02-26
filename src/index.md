@@ -14,3 +14,10 @@ Join us as we share our passion for our space home, whether gathering for meetin
 <div>
 {% include "partials/homeCards.njk" %}
 </div>
+
+
+{% set text = "Register Now" %}
+{% set link = "https://example.com/register" %}
+{% set icon = "ticket-perforated" %}
+{% set style = "primary" %}
+{% include "partials/btn.njk" %}
