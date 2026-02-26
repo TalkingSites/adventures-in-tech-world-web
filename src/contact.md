@@ -1,10 +1,10 @@
 ---
 layout: base.njk
-title: Contact Space Club!
-description: Want to reach out? You can do so from this page
+title: Contact
+description: Get in touch with the Adventures in Tech World team. Questions, feedback, or collaboration enquiries welcome.
 permalink: "/contact/"
 formTitle: Get in Touch
-formDescription: Have questions? We'd love to hear from you. Fill out the form below and we'll get back to you soon.
+formDescription: Have a question about Tech World, want to collaborate, or keen to follow the project? Fill out the form and we'll get back to you.
 formName: contact
 formFields:
   - name

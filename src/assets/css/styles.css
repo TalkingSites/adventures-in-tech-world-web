@@ -1,15 +1,25 @@
 /* Customise the colors on your website here! */
 
 :root {
-  --bs-primary: #d4204d;
-  --bs-primary-rgb: 212, 32, 77;
-  --bs-primary-text-emphasis: #a00c31;
-  --bs-secondary: #8200d8;
-  --bs-secondary-rgb: 130, 0, 216;
-  --bs-secondary-text-emphasis: #4a0f72;
-  --bs-heading-color: var(--bs-primary);
+  --bs-primary: #1B96F2;
+  --bs-primary-rgb: 27, 150, 242;
+  --bs-primary-text-emphasis: #5EC8F8;
+  --bs-secondary: #b197fc;
+  --bs-secondary-rgb: 177, 151, 252;
+  --bs-secondary-text-emphasis: #c4b5fd;
+  --bs-heading-color: var(--bs-secondary);
   --divider-url: url('/assets/space-divider.svg');
-  --gradient: linear-gradient(135deg, #3BC7F6 0%, #A855F7 29.8%, #CC4D9E 69.3%, #EF4444 100%);
+  --gradient: linear-gradient(135deg, #0a2a6e 0%, #1B96F2 35%, #6d28d9 68%, #b197fc 100%);
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #0a0e1a;
+  --bs-body-bg-rgb: 10, 14, 26;
+  --bs-secondary-bg: #0f1629;
+  --bs-tertiary-bg: #111827;
+  --bs-body-tertiary-bg: #111827;
+  --bs-border-color: rgba(177, 151, 252, 0.2);
+  --bs-border-color-translucent: rgba(177, 151, 252, 0.15);
 }
 
 /* Customise your Font, change "Ubuntu" to another font */
@@ -98,8 +108,11 @@ body {
 }
 
 #footer-main .nav-link:hover {
-  border-bottom: 2px var(--bs-border-style) var(--bs-border-color) !important;
-  --bs-border-width: 3px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.55) !important;
+}
+
+.bg-footer-gradient {
+  background: linear-gradient(to bottom, #0d1630 0%, #080c18 100%);
 }
 
 .border-primary-hover {

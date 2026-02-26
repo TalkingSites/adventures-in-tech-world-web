@@ -7,27 +7,27 @@
 
 {# Determine button class based on style #}
 {% if style.startsWith("outline") %}
-    {% set btnClass = "btn-" ~ style %}
+{% set btnClass = "btn-" ~ style %}
 {% elif style == "outline" %}
-    {% set btnClass = "btn-outline-primary" %}
+{% set btnClass = "btn-outline-primary" %}
 {% else %}
-    {% set btnClass = "btn-" ~ style %}
+{% set btnClass = "btn-" ~ style %}
 {% endif %}
 
 {# Determine alignment class using Bootstrap flex utilities #}
 {% if align == "start" %}
-    {% set alignClass = "justify-content-start" %}
+{% set alignClass = "justify-content-start" %}
 {% elif align == "end" %}
-    {% set alignClass = "justify-content-end" %}
+{% set alignClass = "justify-content-end" %}
 {% else %}
-    {% set alignClass = "justify-content-center" %}
+{% set alignClass = "justify-content-center" %}
 {% endif %}
 
 <div class="d-flex {{ alignClass }}">
-    <a href="{{ href }}" class="btn {{ btnClass }}">
-        {% if icon %}
-            <i class="bi bi-{{ icon }} me-2"></i>
-        {% endif %}
-        {{ text }}
-    </a>
+<a href="{{ href }}" class="btn {{ btnClass }}">
+{% if icon %}
+<i class="bi bi-{{ icon }} me-2"></i>
+{% endif %}
+{{ text }}
+</a>
 </div>

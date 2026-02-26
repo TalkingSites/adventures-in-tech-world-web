@@ -1,0 +1,11 @@
+<div class="row g-4 my-2">
+  {% for feature in features %}
+  <div class="col-12 col-md-4">
+    <div class="card bg-body-tertiary border-{{ feature.color }} border-opacity-25 h-100 p-3 border-{{ feature.color }}-hover">
+      <i class="bi bi-{{ feature.icon }} text-{{ feature.color }} fs-2 mb-2"></i>
+      <h5 class="text-{{ feature.color }}">{{ feature.title }}</h5>
+      <p class="text-muted mb-0 small">{{ feature.description }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>

@@ -1,11 +1,13 @@
 {
-  "title": "Space Club!",
-  "description": "Space Club! is our way of putting content for this web template. Check out the pages, posts, events and search. Whats it built with? Great question, it is 11ty, Nunjucks",
-  "logo": "/assets/images/logo.svg",
-  "favicon": "/assets/images/favicon.svg",
+  "title": "Adventures in Tech World",
+  "description": "Adventures in Tech World is an educational multiplayer 2D pixel game where players explore, solve coding challenges, and collaborate in real time. Play free in your browser.",
+  "logo": "/assets/images/logo.png",
+  "favicon": "/assets/images/logo.png",
   "baseUrl": "/",
   "timezone": "Australia/Sydney",
   "dateFormat": "dddd, Do MMMM YYYY",
   "searchTitle": "Search",
-  "searchPlaceholder": "Search events, posts and pages..."
+  "searchPlaceholder": "Search posts and pages...",
+  "gameRepo": "https://github.com/enspyr/tech-world",
+  "siteRepo": "https://github.com/talkingsites/tech-world-web"
 }

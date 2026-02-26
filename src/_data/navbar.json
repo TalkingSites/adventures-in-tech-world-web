@@ -5,13 +5,19 @@
     "footer": true
   },
   {
-    "title": "About",
-    "href": "/about",
+    "title": "Dev Blog",
+    "href": "/posts",
     "footer": true
   },
   {
     "title": "Contact",
     "href": "/contact",
     "footer": true
+  },
+  {
+    "title": "Play Now",
+    "href": "#play",
+    "footer": false,
+    "cta": true
   }
 ]

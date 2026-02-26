@@ -1,0 +1,38 @@
+[
+  {
+    "icon": "people-fill",
+    "color": "primary",
+    "title": "Real-Time Multiplayer",
+    "description": "See other players move live, send messages, and connect via proximity-based voice and video chat inside the game world."
+  },
+  {
+    "icon": "code-slash",
+    "color": "secondary",
+    "title": "23 Coding Challenges",
+    "description": "Beginner, Intermediate, and Advanced tiers with a built-in syntax-highlighted code editor. Solve them solo or with friends."
+  },
+  {
+    "icon": "robot",
+    "color": "primary",
+    "title": "AI Tutor - Clawd",
+    "description": "Get instant code reviews and hints from Clawd, an in-game AI tutor powered by Claude. Supports voice input and output."
+  },
+  {
+    "icon": "map",
+    "color": "secondary",
+    "title": "6 Unique Maps",
+    "description": "From the Open Arena to The Library and The Workshop, each map has its own layout and feel to explore."
+  },
+  {
+    "icon": "pencil-square",
+    "color": "primary",
+    "title": "Map Editor",
+    "description": "Paint barriers, spawn points, and terminals on a 50x50 grid. Import and export maps in ASCII format."
+  },
+  {
+    "icon": "globe",
+    "color": "secondary",
+    "title": "Play Anywhere",
+    "description": "Runs in the browser with no download required. Also available on macOS, iOS, and Android."
+  }
+]
