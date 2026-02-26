@@ -54,7 +54,7 @@ Adventures in Tech World is an educational prototype being developed with suppor
 
 <div class="d-flex flex-wrap gap-3 mt-5">
 {% set text = "Play in Your Browser" %}
-{% set link = "/" %}
+{% set link = "https://adventures-in-tech.world/" %}
 {% set icon = "play-fill" %}
 {% set style = "primary" %}
 {% set align = "start" %}

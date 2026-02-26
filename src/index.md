@@ -11,8 +11,10 @@ permalink: "/"
 
 <div class="d-flex flex-wrap gap-3 my-4">
 {% set text = "Play in Your Browser" %}
-{% set link = "#play" %}
+{% set link = "https://adventures-in-tech.world/" %}
 {% set icon = "play-fill" %}
+{% set style = "primary" %}
+{% set align = "start" %}
 {% include "partials/btn.njk" %}
 
 {% set text = "Dev Blog" %}

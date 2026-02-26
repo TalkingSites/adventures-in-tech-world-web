@@ -21,8 +21,9 @@
   },
   {
     "title": "Play Now",
-    "href": "#play",
+    "href": "https://adventures-in-tech.world/",
     "footer": false,
-    "cta": true
+    "cta": true,
+    "external": true
   }
 ]
